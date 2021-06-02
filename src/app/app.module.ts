@@ -12,8 +12,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { EducationComponent } from './components/education/education.component';
 import { TimelineEntryComponent } from './components/education/timeline-entry/timeline-entry.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SkillItemComponent } from './components/skills/skill-item/skill-item.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,9 @@ import { TimelineEntryComponent } from './components/education/timeline-entry/ti
     OverviewComponent,
     EducationComponent,
     TimelineEntryComponent,
+    SkillsComponent,
+    SkillItemComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,7 @@ import { TimelineEntryComponent } from './components/education/timeline-entry/ti
     MatIconModule,
     MatButtonModule,
     MatChipsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
