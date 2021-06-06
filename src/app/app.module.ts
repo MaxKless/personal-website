@@ -18,6 +18,9 @@ import { TimelineEntryComponent } from './components/education/timeline-entry/ti
 import { SkillsComponent } from './components/skills/skills.component';
 import { SkillItemComponent } from './components/skills/skill-item/skill-item.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { BachelorComponent } from './components/projects/bachelor/bachelor.component';
+import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag-list.component';
+import { IntershopPwaComponent } from './components/projects/intershop-pwa/intershop-pwa.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     SkillsComponent,
     SkillItemComponent,
     ProjectsComponent,
+    BachelorComponent,
+    ChipTagListComponent,
+    IntershopPwaComponent,
   ],
   imports: [
     BrowserModule,
