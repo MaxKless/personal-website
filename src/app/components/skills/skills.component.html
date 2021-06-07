@@ -4,15 +4,27 @@
   <div class="col-12 col-md-6">
     <mat-card>
       <mat-card-content>
-        <h2 class="text-center"> Professional</h2>
-        <app-skill-item label="Angular" amount="80"></app-skill-item>
-        <mat-divider></mat-divider>
-        <app-skill-item label="ngrx" amount="80"></app-skill-item>
-        <mat-divider></mat-divider>
-        <app-skill-item label="C#" amount="60"></app-skill-item>
-        <mat-divider></mat-divider>
-
-        <app-skill-item label="Unity" amount="60"></app-skill-item>
+        <h2 class="text-center">Professional</h2>
+        <app-skill-item
+          label="Angular"
+          amount="90"
+          [tags]="['Typescript', 'Rxjs', 'Ngrx', 'Ngx-formly']"
+        ></app-skill-item>
+        <app-skill-item
+          label="Web Development"
+          amount="80"
+          [tags]="['Javascript', 'HTML', 'CSS', 'node.js']"
+        ></app-skill-item>
+        <app-skill-item
+          label="Unity"
+          amount="60"
+          [tags]="['C#', 'UniRx', 'Extenject']"
+        ></app-skill-item>
+        <app-skill-item
+          label="Development Tools"
+          amount="75"
+          [tags]="['Git', 'GitHub', 'Azure', 'VS Code']"
+        ></app-skill-item>
       </mat-card-content>
     </mat-card>
   </div>
@@ -20,6 +32,32 @@
     <mat-card>
       <mat-card-content>
         <h2 class="text-center">Personal</h2>
+        <app-skill-item
+          label="Teamwork"
+          amount="85"
+          [tags]="['sample', 'testing']"
+        ></app-skill-item>
+        <app-skill-item
+          label="Communication"
+          amount="80"
+          [tags]="['sample', 'testing']"
+        ></app-skill-item>
+        <app-skill-item
+          label="Leadership"
+          amount="65"
+          [tags]="['sample', 'testing']"
+        ></app-skill-item>
+        <div class="row mb-3 pt-3">
+          <div class="col-3">
+            Languages
+          </div>
+          <div class="col-9 align-self-center">
+            <mat-chip-list>
+              <mat-chip selected="true" selectable="false">English</mat-chip>
+              <mat-chip selected="true" selectable="false">German</mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
