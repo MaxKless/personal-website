@@ -1,5 +1,8 @@
 <mat-card class="h-100">
-  <mat-card-header>
+  <button mat-icon-button class="expand-button" (click)="openDialog()">
+    <mat-icon>open_in_new</mat-icon>
+  </button>
+  <mat-card-header class="d-flex">
     <mat-card-title>
       Bachelor Thesis:<br />
       Controlling virtual agents in an urban traffic simulation
@@ -16,17 +19,26 @@
         <div class="col-5">
           <img class="thumbnail" src="assets/thesis_thumbnail.PNG" />
         </div>
-        <div class="col-7">
+        <div class="col-7 d-flex flex-column justify-content-between">
           <div class="row">
-            <p>
-              Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-              ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque.
+            <p class="text-justify">
+              For my bachelor thesis at
+              <a href="https://www.fmi.uni-jena.de/en/">FSU Jena</a>, I used
+              reinforcement learning (specifically, Proximal Policy
+              Optimization) to teach virutal cars how to navigate a simulated
+              road network. My approach is built on Unity's
+              <a href="https://github.com/Unity-Technologies/ml-agents"
+                >ML-Agents</a
+              >
+              toolkit and a proprietary road simulation library developed at my
+              University. <br />
+              I designed a training environment including several crossings and
+              curves in addition to multiple configurations that were used to
+              run three different experiments. <br />
+              I received a grade of 1.0.
             </p>
           </div>
-          <div class="row align-items-end">
+          <div class="row">
             <div class="col-auto">
               <a
                 mat-raised-button
@@ -34,6 +46,11 @@
                 download="max_kless_thesis.pdf"
                 color="primary"
                 >Download PDF</a
+              >
+            </div>
+            <div class="col-auto">
+              <a mat-raised-button color="primary" (click)="openDialog()"
+                >Show Details</a
               >
             </div>
           </div>
