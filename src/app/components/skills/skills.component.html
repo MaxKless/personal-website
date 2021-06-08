@@ -1,7 +1,7 @@
 <h1 class="pt-4 text-center">Skills</h1>
 
 <div class="row">
-  <div class="col-12 col-md-6" style="position:relative">
+  <div class="col-12 col-md-6" style="position: relative">
     <mat-card class="h-100">
       <button mat-fab color="primary" class="circle-icon">
         <mat-icon>settings</mat-icon>
@@ -16,12 +16,12 @@
         <app-skill-item
           label="Web Development"
           amount="80"
-          [tags]="['Javascript', 'HTML', 'CSS', 'node.js']"
+          [tags]="['Javascript', 'HTML', 'CSS', 'Bootstrap', 'node.js']"
         ></app-skill-item>
         <app-skill-item
           label="Unity"
           amount="60"
-          [tags]="['C#', 'UniRx', 'Extenject']"
+          [tags]="['C#', 'ML-Agents','UniRx', 'Extenject']"
         ></app-skill-item>
         <app-skill-item
           label="Development Tools"
@@ -31,13 +31,23 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div class="col-12 col-md-6" style="position:relative">
+  <div class="col-12 col-md-6" style="position: relative">
     <mat-card class="h-100">
       <button mat-fab color="primary" class="circle-icon">
         <mat-icon>person</mat-icon>
       </button>
       <mat-card-content class="pt-3">
         <h2 class="text-center">Personal</h2>
+        <div class="row mb-3 pt-3">
+          <div class="col-3">Languages</div>
+          <div class="col-9 align-self-center">
+            <mat-chip-list>
+              <mat-chip selected="true" selectable="false">English</mat-chip>
+              <mat-chip selected="true" selectable="false">German</mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+        <div class="row filler"></div>
         <app-skill-item
           label="Teamwork"
           amount="85"
@@ -53,17 +63,6 @@
           amount="65"
           [tags]="['sample', 'testing']"
         ></app-skill-item>
-        <div class="row mb-3 pt-3">
-          <div class="col-3">
-            Languages
-          </div>
-          <div class="col-9 align-self-center">
-            <mat-chip-list>
-              <mat-chip selected="true" selectable="false">English</mat-chip>
-              <mat-chip selected="true" selectable="false">German</mat-chip>
-            </mat-chip-list>
-          </div>
-        </div>
       </mat-card-content>
     </mat-card>
   </div>
