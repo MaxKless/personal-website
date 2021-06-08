@@ -1,4 +1,7 @@
 <mat-card class="h-100">
+  <button mat-icon-button class="expand-button" (click)="openDialog()">
+    <mat-icon>open_in_new</mat-icon>
+  </button>
   <mat-card-header>
     <mat-card-title> Intershop PWA </mat-card-title>
     <mat-card-subtitle>
@@ -13,14 +16,18 @@
         <div class="col-5 align-self-center">
           <img class="thumbnail" src="assets/pwa_screenshot.png" />
         </div>
-        <div class="col-7">
+        <div class="col-7 d-flex flex-column justify-content-between">
           <div class="row">
             <p>
-              Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-              ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque.
+              The Intershop PWA is an Angular-based progressive web app
+              storefront for the Intershop Commerce Suite. <br />
+              Developing the Intershop PWA has given me a broad insight into the
+              process of building an enterprise-scale Angular project. I have
+              gathered a lot of experience in writing angular components,
+              services and tests in addition to working with a multitude of
+              additional technologies and frameworks that are used within the
+              PWA. For more information on my responsibilites, have a look at
+              the detailed overview.
             </p>
           </div>
           <div class="row">
@@ -32,6 +39,9 @@
               >
                 View on Github
               </a>
+            </div>
+            <div class="col-auto">
+              <a mat-raised-button color="primary" (click)="openDialog()"> Show Details </a>
             </div>
           </div>
         </div>

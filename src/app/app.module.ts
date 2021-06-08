@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { EducationComponent } from './components/education/education.component';
 import { TimelineEntryComponent } from './components/education/timeline-entry/timeline-entry.component';
@@ -24,6 +25,7 @@ import { BachelorComponent } from './components/projects/bachelor/bachelor.compo
 import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag-list.component';
 import { IntershopPwaComponent } from './components/projects/intershop-pwa/intershop-pwa.component';
 import { BachelorDialogComponent } from './components/projects/bachelor/bachelor-dialog/bachelor-dialog.component';
+import { IntershopPwaDialogComponent } from './components/projects/intershop-pwa/intershop-pwa-dialog/intershop-pwa-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { BachelorDialogComponent } from './components/projects/bachelor/bachelor
     ChipTagListComponent,
     IntershopPwaComponent,
     BachelorDialogComponent,
+    IntershopPwaDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { BachelorDialogComponent } from './components/projects/bachelor/bachelor
     MatButtonToggleModule,
     MatChipsModule,
     MatProgressBarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

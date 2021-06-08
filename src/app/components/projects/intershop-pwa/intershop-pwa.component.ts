@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { IntershopPwaDialogComponent } from './intershop-pwa-dialog/intershop-pwa-dialog.component';
 
 @Component({
   selector: 'app-intershop-pwa',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntershopPwaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(): void {
+    this.matDialog.open(IntershopPwaDialogComponent);
   }
 
 }
