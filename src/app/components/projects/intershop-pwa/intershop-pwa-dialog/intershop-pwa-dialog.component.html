@@ -20,6 +20,10 @@
         <li>Using RXJS to write functional, observable-driven code.</li>
         <li>Developing, debugging and using angular schematics.</li>
         <li>Developing and maintaining end-to-end tests with cypress.</li>
+        <li>
+          Developing within a complex deployment setup, including SSR through
+          Angular Universal and a NGINX reverse proxy
+        </li>
       </ul>
     </div>
     <div class="col-6">
@@ -34,16 +38,42 @@
             including validation and styling, was becoming increasingly hard to
             maintain and customize - both for ourselves and for our clients. We
             needed a flexible, easily customizable way to write forms.<br />
-            <strong> The Solution:</strong>
+          </p>
+          <p>
+            <strong> The Solution:</strong> <br />
             I researched the <a href="https://formly.dev/">Formly</a> library
             which allows for programmatic definition of forms via typescript.
+            After a usability test, I developed a solution - based on Formly -
+            that enables clients to easily define custom registration forms and
+            country-specific address templates. I also held a series of
+            trainings for my team to explain Formly and its implementation.
+            We've been converting every single form since.
           </p>
         </mat-expansion-panel>
         <mat-expansion-panel class="mt-1">
           <mat-expansion-panel-header>
             <mat-panel-title>Localization Update </mat-panel-title>
           </mat-expansion-panel-header>
-          blub lub
+          <p>
+            <strong> The Problem: </strong> <br />
+            A common criticism with the Intershop PWA was the fact that changing
+            even a single translation required a change to a set of local json
+            files. This meant that every translation change required a new
+            deployment, which created a lot of work for our clients as well as
+            operations team.
+          </p>
+          <p>
+            <strong> The Solution:</strong> <br />
+            I researched multiple solutions for enabling dynamically loaded
+            translations. After several implementation tests, we decided on
+            loading them via the Intershop REST API. I created a custom
+            <a href="https://github.com/ngx-translate/core">ngx-translate</a>
+            loader to communicate with the API and use the local files as a
+            fallback. In addition, I wrote a simple script which converts json
+            files to the xliff format that is used by Intershop's translation
+            management backend. We received very positive feedback for the
+            flexible solution.
+          </p>
         </mat-expansion-panel>
         <mat-expansion-panel class="mt-1">
           <mat-expansion-panel-header>
@@ -51,7 +81,15 @@
               Automatic Migration with TS-Morph
             </mat-panel-title>
           </mat-expansion-panel-header>
-          blub lub
+          <p>
+            <strong> The Problem: </strong> <br />
+            AAAAAAAAAAAAAAAAAAAAAAAAAAA
+            Migration to action creators for us and clients
+          </p>
+          <p>
+            <strong> The Solution:</strong> <br />
+          set of ts morph scripts that parse the AST for relevant cases and update
+          </p>
         </mat-expansion-panel>
       </div>
     </div>
