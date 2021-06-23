@@ -1,0 +1,42 @@
+<mat-card class="h-100">
+  <mat-card-header>
+    <mat-card-title> Building recommender systems: Funk's algorithm for simple matrix factorisation </mat-card-title>
+    <mat-card-subtitle>
+      <app-chip-tag-list
+        [tags]="['Machine Learning', 'Python']"
+      ></app-chip-tag-list>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <img class="thumbnail" src="assets/recommender_systems_thumbnail.PNG" />
+        </div>
+        <div class="col-7 d-flex flex-column justify-content-between">
+          <div class="row">
+            <p>
+              I wrote this short paper at University as part of a lab on Statistical Learning Theory. <br/>
+              It starts by covering the mathematical foundation of
+              <a href="https://sifter.org/simon/journal/20061211.html">Simon Funk's famously simplified approach to matrix factorization</a>.
+               In the later sections, I describe the provided dataset and additional regularization and parameter tweaking steps taken to optimize the effectiveness of the system.
+               Finally, I analyze the results and put them into context with other attempted approaches.
+
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-auto">
+              <a
+                mat-raised-button
+                href="assets/recommender_systems.pdf"
+                download="max_kless_recommender_systems.pdf"
+                color="primary"
+                >Download PDF</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

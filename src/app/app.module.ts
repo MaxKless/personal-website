@@ -26,6 +26,7 @@ import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag
 import { IntershopPwaComponent } from './components/projects/intershop-pwa/intershop-pwa.component';
 import { BachelorDialogComponent } from './components/projects/bachelor/bachelor-dialog/bachelor-dialog.component';
 import { IntershopPwaDialogComponent } from './components/projects/intershop-pwa/intershop-pwa-dialog/intershop-pwa-dialog.component';
+import { RecommenderSystemComponent } from './components/projects/recommender-system/recommender-system.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { IntershopPwaDialogComponent } from './components/projects/intershop-pwa
     IntershopPwaComponent,
     BachelorDialogComponent,
     IntershopPwaDialogComponent,
+    RecommenderSystemComponent,
   ],
   imports: [
     BrowserModule,
