@@ -27,6 +27,7 @@ import { IntershopPwaComponent } from './components/projects/intershop-pwa/inter
 import { BachelorDialogComponent } from './components/projects/bachelor/bachelor-dialog/bachelor-dialog.component';
 import { IntershopPwaDialogComponent } from './components/projects/intershop-pwa/intershop-pwa-dialog/intershop-pwa-dialog.component';
 import { RecommenderSystemComponent } from './components/projects/recommender-system/recommender-system.component';
+import { PersonalWebsiteComponent } from './components/projects/personal-website/personal-website.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { RecommenderSystemComponent } from './components/projects/recommender-sy
     BachelorDialogComponent,
     IntershopPwaDialogComponent,
     RecommenderSystemComponent,
+    PersonalWebsiteComponent,
   ],
   imports: [
     BrowserModule,
