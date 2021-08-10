@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { BootstrapSize, ResizeService } from 'src/app/services/resize.service';
 
 @Component({
   selector: 'app-timeline-entry',
@@ -9,9 +12,11 @@ export class TimelineEntryComponent implements OnInit {
 
   @Input() side: 'left' | 'right';
   @Input() chip: string;
-  constructor() { }
+  size$ : Observable<BootstrapSize>;
+  constructor(private resizeService: ResizeService) { }
 
   ngOnInit(): void {
+     this.size$ = this.resizeService.size$;
   }
 
 }

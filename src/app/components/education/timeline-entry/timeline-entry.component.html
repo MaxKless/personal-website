@@ -1,29 +1,46 @@
-<div *ngIf="side === 'left'; else right" class="row mt-4">
-  <div class="col-6 pr-4">
-    <ng-container *ngTemplateOutlet="linkTemplate"></ng-container>
-  </div>
-  <div class="col-2 align-self-center">
+<div *ngIf="(size$ | async) <= 1; else alternating">
+  <div class="align-self-center d-flex justify-content-center mt-2">
     <mat-chip-list>
       <mat-chip color="accent" selected="true" selectable="false">{{
         chip
       }}</mat-chip>
     </mat-chip-list>
   </div>
+  <div class="row mt-2">
+    <div class="col-12 pl-4">
+      <ng-container *ngTemplateOutlet="linkTemplate"></ng-container>
+    </div>
+  </div>
 </div>
 
-<ng-template #right>
-  <div class="row mt-4">
-    <div class="col-2 offset-4 align-self-center d-flex justify-content-end">
+<ng-template #alternating>
+  <div *ngIf="side === 'left'; else right" class="row mt-4">
+    <div class="col-6 pr-4">
+      <ng-container *ngTemplateOutlet="linkTemplate"></ng-container>
+    </div>
+    <div class="col-2 align-self-center">
       <mat-chip-list>
         <mat-chip color="accent" selected="true" selectable="false">{{
           chip
         }}</mat-chip>
       </mat-chip-list>
     </div>
-    <div class="col-6 pl-4">
-      <ng-container *ngTemplateOutlet="linkTemplate"></ng-container>
-    </div>
   </div>
+
+  <ng-template #right>
+    <div class="row mt-4">
+      <div class="col-2 offset-4 align-self-center d-flex justify-content-end">
+        <mat-chip-list>
+          <mat-chip color="accent" selected="true" selectable="false">{{
+            chip
+          }}</mat-chip>
+        </mat-chip-list>
+      </div>
+      <div class="col-6 pl-4">
+        <ng-container *ngTemplateOutlet="linkTemplate"></ng-container>
+      </div>
+    </div>
+  </ng-template>
 </ng-template>
 
 <ng-template #linkTemplate>
