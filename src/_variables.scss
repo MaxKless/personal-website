@@ -1,0 +1,14 @@
+@use '~@angular/material' as mat;
+
+@import '~@angular/material/theming';
+
+$custom-primary: mat.define-palette(mat.$cyan-palette, 800, 600, 900);
+$custom-accent: mat.define-palette(mat.$orange-palette, A400, A200, A700);
+
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+
+$primary: mat-color($custom-primary);
+$accent: mat-color($custom-accent);
+
+$background: #FAFAFA
