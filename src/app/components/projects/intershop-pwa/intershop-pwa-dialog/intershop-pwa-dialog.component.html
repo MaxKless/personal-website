@@ -4,9 +4,9 @@
     [tags]="['Angular', 'Typescript', 'Rxjs', 'Ngrx']"
   ></app-chip-tag-list>
 </h2>
-<mat-card-content>
+<mat-dialog-content class="pb-2">
   <div class="row">
-    <div class="col-6 h-100">
+    <div class="col-6 h-100 ">
       <h4>My responsibilites while developing the Intershop PWA include:</h4>
       <ul>
         <li>
@@ -28,6 +28,7 @@
     </div>
     <div class="col-6">
       <div class="d-flex flex-column">
+        <!-- Formly -->
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title> Formly Integration </mat-panel-title>
@@ -50,6 +51,7 @@
             We've been converting every single form since.
           </p>
         </mat-expansion-panel>
+        <!-- Localization Update -->
         <mat-expansion-panel class="mt-1">
           <mat-expansion-panel-header>
             <mat-panel-title>Localization Update </mat-panel-title>
@@ -75,7 +77,8 @@
             flexible solution.
           </p>
         </mat-expansion-panel>
-        <mat-expansion-panel class="mt-1">
+        <!-- Ts morph, will be ts lint -->
+        <mat-expansion-panel class="mt-1" style="z-index: 1000;">
           <mat-expansion-panel-header>
             <mat-panel-title>
               Automatic Migration with TS-Morph
@@ -94,4 +97,4 @@
       </div>
     </div>
   </div>
-</mat-card-content>
+</mat-dialog-content>

@@ -16,6 +16,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { EducationComponent } from './components/education/education.component';
 import { TimelineEntryComponent } from './components/education/timeline-entry/timeline-entry.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -62,7 +63,8 @@ import { GithubCornerComponent } from './components/shared/github-corner/github-
     MatButtonToggleModule,
     MatChipsModule,
     MatProgressBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
