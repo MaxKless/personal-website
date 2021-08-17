@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { DarkmodeService } from './services/darkmode/darkmode.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'personal-website';
+  darkMode$: Observable<boolean>;
+
+  constructor(private darkmode: DarkmodeService) {}
+
+  ngOnInit() {
+    this.darkMode$ = this.darkmode.isDarkMode$;
+  }
 }

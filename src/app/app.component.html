@@ -1,4 +1,4 @@
-<div class="mat-app-background">
+<div class="mat-app-background" [ngClass]="{ darkMode: (darkMode$ | async) }">
   <app-github-corner></app-github-corner>
   <div class="mat-typography">
     <app-header> </app-header>
@@ -12,5 +12,4 @@
       <p class="text-center">&copy; Max Kless, 2021</p>
     </div>
   </div>
-
 </div>

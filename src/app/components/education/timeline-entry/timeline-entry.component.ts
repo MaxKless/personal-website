@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { BootstrapSize, ResizeService } from 'src/app/services/resize.service';
+import { BootstrapSize, ResizeService } from 'src/app/services/resize/resize.service';
 
 @Component({
   selector: 'app-timeline-entry',
