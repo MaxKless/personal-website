@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './recommender-system.component.html',
   styleUrls: ['./recommender-system.component.scss']
 })
-export class RecommenderSystemComponent implements OnInit {
+export class RecommenderSystemComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

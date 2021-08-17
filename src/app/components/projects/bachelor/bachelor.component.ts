@@ -7,10 +7,8 @@ import { BachelorDialogComponent } from './bachelor-dialog/bachelor-dialog.compo
   templateUrl: './bachelor.component.html',
   styleUrls: ['./bachelor.component.scss'],
 })
-export class BachelorComponent implements OnInit {
+export class BachelorComponent {
   constructor(private matDialog: MatDialog) {}
-
-  ngOnInit(): void {}
 
   openDialog(): void {
     this.matDialog.open(BachelorDialogComponent);

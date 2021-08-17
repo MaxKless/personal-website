@@ -5,9 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './chip-tag-list.component.html',
   styleUrls: ['./chip-tag-list.component.scss'],
 })
-export class ChipTagListComponent implements OnInit {
+export class ChipTagListComponent {
   @Input() tags: string[];
   constructor() {}
 
-  ngOnInit(): void {}
 }

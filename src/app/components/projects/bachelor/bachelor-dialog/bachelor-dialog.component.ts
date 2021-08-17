@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bachelor-dialog.component.html',
   styleUrls: ['./bachelor-dialog.component.scss']
 })
-export class BachelorDialogComponent implements OnInit {
+export class BachelorDialogComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

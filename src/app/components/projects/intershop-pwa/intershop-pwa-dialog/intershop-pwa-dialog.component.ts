@@ -6,13 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './intershop-pwa-dialog.component.html',
   styleUrls: ['./intershop-pwa-dialog.component.scss']
 })
-export class IntershopPwaDialogComponent implements OnInit {
+export class IntershopPwaDialogComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
 
 }

@@ -7,12 +7,9 @@ import { IntershopPwaDialogComponent } from './intershop-pwa-dialog/intershop-pw
   templateUrl: './intershop-pwa.component.html',
   styleUrls: ['./intershop-pwa.component.scss']
 })
-export class IntershopPwaComponent implements OnInit {
+export class IntershopPwaComponent {
 
   constructor(private matDialog: MatDialog) { }
-
-  ngOnInit(): void {
-  }
 
   openDialog(): void {
     this.matDialog.open(IntershopPwaDialogComponent);

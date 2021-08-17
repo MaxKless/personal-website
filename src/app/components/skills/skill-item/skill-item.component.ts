@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './skill-item.component.html',
   styleUrls: ['./skill-item.component.scss']
 })
-export class SkillItemComponent implements OnInit {
+export class SkillItemComponent {
 
   @Input() label: string;
   @Input() amount: number;
@@ -13,8 +13,5 @@ export class SkillItemComponent implements OnInit {
   @Input() notags: boolean;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
