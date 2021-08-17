@@ -15,5 +15,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.darkMode$ = this.darkmode.isDarkMode$;
+    this.keepFaviconUpdated();
+  }
+
+  keepFaviconUpdated() {
+    const faviconElement: HTMLLinkElement = document.querySelector('#favicon');
+    this.darkMode$.subscribe((dm) => {
+      faviconElement.href = dm ? './assets/favicon_dark.ico' : './assets/favicon.ico';
+    });
   }
 }
