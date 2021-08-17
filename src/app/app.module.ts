@@ -64,7 +64,7 @@ import { GithubCornerComponent } from './components/shared/github-corner/github-
     MatChipsModule,
     MatProgressBarModule,
     MatExpansionModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

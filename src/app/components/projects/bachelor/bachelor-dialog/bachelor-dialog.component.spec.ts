@@ -8,9 +8,8 @@ describe('BachelorDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BachelorDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [BachelorDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

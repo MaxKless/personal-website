@@ -1,19 +1,6 @@
-import { HostListener, Injectable, OnInit } from '@angular/core';
-import {
-  BehaviorSubject,
-  fromEvent,
-  merge,
-  Observable,
-  of,
-  Subject,
-} from 'rxjs';
-import {
-  distinctUntilChanged,
-  map,
-  startWith,
-  tap,
-  windowTime,
-} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, fromEvent, Observable } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 
 export enum BootstrapSize {
   'xs',
@@ -28,9 +15,7 @@ export enum BootstrapSize {
   providedIn: 'root',
 })
 export class ResizeService {
-  private sizeSubject$ = new BehaviorSubject<BootstrapSize>(
-    mapToBootstrapSize(window.innerWidth)
-  );
+  private sizeSubject$ = new BehaviorSubject<BootstrapSize>(mapToBootstrapSize(window.innerWidth));
   public size$: Observable<BootstrapSize>;
   constructor() {
     this.size$ = this.sizeSubject$.asObservable();
@@ -38,7 +23,7 @@ export class ResizeService {
       .pipe(
         map(() => window.innerWidth),
         map(mapToBootstrapSize),
-        distinctUntilChanged(),
+        distinctUntilChanged()
       )
       .subscribe((size) => this.sizeSubject$.next(size));
   }

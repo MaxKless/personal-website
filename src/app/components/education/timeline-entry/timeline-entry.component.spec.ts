@@ -8,9 +8,8 @@ describe('TimelineEntryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TimelineEntryComponent ]
-    })
-    .compileComponents();
+      declarations: [TimelineEntryComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('RecommenderSystemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecommenderSystemComponent ]
-    })
-    .compileComponents();
+      declarations: [RecommenderSystemComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

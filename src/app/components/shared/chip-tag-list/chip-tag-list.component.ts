@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chip-tag-list',
@@ -8,5 +8,4 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ChipTagListComponent {
   @Input() tags: string[];
   constructor() {}
-
 }

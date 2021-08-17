@@ -12,14 +12,10 @@ export class DarkmodeService {
     this.isDarkMode$ = this.darkModeSubject$.asObservable().pipe(shareReplay(1));
 
     if (window.matchMedia) {
-      this.darkModeSubject$.next(
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      );
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', (e) => {
-          this.darkModeSubject$.next(e.matches);
-        });
+      this.darkModeSubject$.next(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        this.darkModeSubject$.next(e.matches);
+      });
     }
   }
 }

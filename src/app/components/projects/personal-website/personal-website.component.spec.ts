@@ -8,9 +8,8 @@ describe('PersonalWebsiteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PersonalWebsiteComponent ]
-    })
-    .compileComponents();
+      declarations: [PersonalWebsiteComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

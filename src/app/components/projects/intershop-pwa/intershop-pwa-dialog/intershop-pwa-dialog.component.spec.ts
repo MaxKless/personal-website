@@ -8,9 +8,8 @@ describe('IntershopPwaDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IntershopPwaDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [IntershopPwaDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

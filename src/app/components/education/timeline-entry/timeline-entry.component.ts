@@ -5,17 +5,15 @@ import { BootstrapSize, ResizeService } from 'src/app/services/resize/resize.ser
 @Component({
   selector: 'app-timeline-entry',
   templateUrl: './timeline-entry.component.html',
-  styleUrls: ['./timeline-entry.component.scss']
+  styleUrls: ['./timeline-entry.component.scss'],
 })
 export class TimelineEntryComponent implements OnInit {
-
   @Input() side: 'left' | 'right';
   @Input() chip: string;
-  size$ : Observable<BootstrapSize>;
-  constructor(private resizeService: ResizeService) { }
+  size$: Observable<BootstrapSize>;
+  constructor(private resizeService: ResizeService) {}
 
   ngOnInit(): void {
-     this.size$ = this.resizeService.size$;
+    this.size$ = this.resizeService.size$;
   }
-
 }

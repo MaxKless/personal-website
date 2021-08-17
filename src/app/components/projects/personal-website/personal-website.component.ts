@@ -1,12 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-personal-website',
   templateUrl: './personal-website.component.html',
-  styleUrls: ['./personal-website.component.scss']
+  styleUrls: ['./personal-website.component.scss'],
 })
-export class PersonalWebsiteComponent {
-
-  constructor() { }
-
-}
+export class PersonalWebsiteComponent {}
