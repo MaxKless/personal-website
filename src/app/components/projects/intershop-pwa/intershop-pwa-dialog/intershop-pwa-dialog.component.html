@@ -1,30 +1,26 @@
 <h2>
   Intershop PWA
-  <app-chip-tag-list
-    [tags]="['Angular', 'Typescript', 'Rxjs', 'Ngrx']"
-  ></app-chip-tag-list>
+  <app-chip-tag-list [tags]="['Angular', 'Typescript', 'Rxjs', 'Ngrx']"></app-chip-tag-list>
 </h2>
 <mat-dialog-content class="pb-2">
   <div class="row">
-    <div class="col-6 h-100 ">
+    <div class="col-6 h-100">
       <h4>My responsibilites while developing the Intershop PWA include:</h4>
       <ul>
-        <li>
-          Developing, maintaining and testing clean, reusable angular
-          components.
-        </li>
-        <li>
-          Developing and testing services that interact with various REST APIs.
-        </li>
+        <li>Developing, maintaining and testing clean, reusable angular components.</li>
+        <li>Developing and testing services that interact with various REST APIs.</li>
         <li>Developing a large NGRX store.</li>
         <li>Using RXJS to write functional, observable-driven code.</li>
         <li>Developing, debugging and using angular schematics.</li>
         <li>Developing and maintaining end-to-end tests with cypress.</li>
         <li>
-          Developing within a complex deployment setup, including SSR through
-          Angular Universal and a NGINX reverse proxy
+          Developing within a complex deployment setup, including SSR through Angular Universal and a NGINX reverse
+          proxy
         </li>
       </ul>
+      <div class="d-flex justify-content-center">
+        <a href="https://github.com/intershop/intershop-pwa" mat-raised-button color="primary"> View on Github </a>
+      </div>
     </div>
     <div class="col-6">
       <div class="d-flex flex-column">
@@ -35,20 +31,17 @@
           </mat-expansion-panel-header>
           <p>
             <strong> The Problem: </strong> <br />
-            We realized that our complex network of custom form components,
-            including validation and styling, was becoming increasingly hard to
-            maintain and customize - both for ourselves and for our clients. We
-            needed a flexible, easily customizable way to write forms.<br />
+            We realized that our complex network of custom form components, including validation and styling, was
+            becoming increasingly hard to maintain and customize - both for ourselves and for our clients. We needed a
+            flexible, easily customizable way to write forms.<br />
           </p>
           <p>
             <strong> The Solution:</strong> <br />
-            I researched the <a href="https://formly.dev/">Formly</a> library
-            which allows for programmatic definition of forms via typescript.
-            After a usability test, I developed a solution - based on Formly -
-            that enables clients to easily define custom registration forms and
-            country-specific address templates. I also held a series of
-            trainings for my team to explain Formly and its implementation.
-            We've been converting every single form since.
+            I researched the <a href="https://formly.dev/">Formly</a> library which allows for programmatic definition
+            of forms via typescript. After a usability test, I developed a solution - based on Formly - that enables
+            clients to easily define custom registration forms and country-specific address templates. I also held a
+            series of trainings for my team to explain Formly and its implementation. We've been converting every single
+            form since.
           </p>
         </mat-expansion-panel>
         <!-- Localization Update -->
@@ -58,40 +51,32 @@
           </mat-expansion-panel-header>
           <p>
             <strong> The Problem: </strong> <br />
-            A common criticism with the Intershop PWA was the fact that changing
-            even a single translation required a change to a set of local json
-            files. This meant that every translation change required a new
-            deployment, which created a lot of work for our clients as well as
-            operations team.
+            A common criticism with the Intershop PWA was the fact that changing even a single translation required a
+            change to a set of local json files. This meant that every translation change required a new deployment,
+            which created a lot of work for our clients as well as operations team.
           </p>
           <p>
             <strong> The Solution:</strong> <br />
-            I researched multiple solutions for enabling dynamically loaded
-            translations. After several implementation tests, we decided on
-            loading them via the Intershop REST API. I created a custom
+            I researched multiple solutions for enabling dynamically loaded translations. After several implementation
+            tests, we decided on loading them via the Intershop REST API. I created a custom
             <a href="https://github.com/ngx-translate/core">ngx-translate</a>
-            loader to communicate with the API and use the local files as a
-            fallback. In addition, I wrote a simple script which converts json
-            files to the xliff format that is used by Intershop's translation
-            management backend. We received very positive feedback for the
-            flexible solution.
+            loader to communicate with the API and use the local files as a fallback. In addition, I wrote a simple
+            script which converts json files to the xliff format that is used by Intershop's translation management
+            backend. We received very positive feedback for the flexible solution.
           </p>
         </mat-expansion-panel>
         <!-- Ts morph, will be ts lint -->
-        <mat-expansion-panel class="mt-1" style="z-index: 1000;">
+        <mat-expansion-panel class="mt-1" style="z-index: 1000">
           <mat-expansion-panel-header>
-            <mat-panel-title>
-              Automatic Migration with TS-Morph
-            </mat-panel-title>
+            <mat-panel-title> Automatic Migration with TS-Morph </mat-panel-title>
           </mat-expansion-panel-header>
           <p>
             <strong> The Problem: </strong> <br />
-            AAAAAAAAAAAAAAAAAAAAAAAAAAA
-            Migration to action creators for us and clients
+            AAAAAAAAAAAAAAAAAAAAAAAAAAA Migration to action creators for us and clients
           </p>
           <p>
             <strong> The Solution:</strong> <br />
-          set of ts morph scripts that parse the AST for relevant cases and update
+            set of ts morph scripts that parse the AST for relevant cases and update
           </p>
         </mat-expansion-panel>
       </div>

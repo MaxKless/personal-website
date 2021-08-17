@@ -2,34 +2,35 @@
   Bachelor Thesis:<br />
   Controlling virtual agents in an urban traffic simulation
 
-  <app-chip-tag-list
-    [tags]="['Unity', 'C#', 'Reinforcement Learning']"
-  ></app-chip-tag-list>
+  <app-chip-tag-list [tags]="['Unity', 'C#', 'Reinforcement Learning']"></app-chip-tag-list>
 </h2>
 <mat-dialog-content>
   <div class="row">
-    <div class="col-6" style="background-color: yellow">
+    <div class="col-6 d-flex" style="background-color: yellow">
       <h1 class="text-center">WIP</h1>
+      <a
+        class="align-self-end"
+        mat-raised-button
+        href="assets/thesis_signed.pdf"
+        download="max_kless_thesis.pdf"
+        color="primary"
+        >Download PDF</a
+      >
     </div>
     <div class="col-6">
       <h3>Abstract</h3>
       <p>
-        Reinforcement learning has been an active area of research for more than
-        a decade and continues to evolve. This bachelor thesis applies
-        reinforcement learning to the problem of controlling virtual agents in
-        an urban traffic simulation. It successfully implements learning agents
-        using Proximal Policy Optimization, a specifically designed curriculum
-        and different approaches to reward shaping in an existing road
-        generation and simulation Unity library called Eltrilo. The thesis will
-        explain the necessary theoretical background regarding neural networks
-        and reinforcement learning, detail the implementation of learning agents
-        and conduct experiments using multiple agent configurations as well as
-        provide an outlook over possible modifications. Furthermore, an analysis
-        of the system’s performance will be provided, concluding that while
-        agents learn to navigate the environment well, reinforcement learning
-        exhibits several key weaknesses that make it suboptimal for urban
-        traffic simulation: long training times, high computational intensity
-        and poor control over specific agent behaviour.
+        Reinforcement learning has been an active area of research for more than a decade and continues to evolve. This
+        bachelor thesis applies reinforcement learning to the problem of controlling virtual agents in an urban traffic
+        simulation. It successfully implements learning agents using Proximal Policy Optimization, a specifically
+        designed curriculum and different approaches to reward shaping in an existing road generation and simulation
+        Unity library called Eltrilo. The thesis will explain the necessary theoretical background regarding neural
+        networks and reinforcement learning, detail the implementation of learning agents and conduct experiments using
+        multiple agent configurations as well as provide an outlook over possible modifications. Furthermore, an
+        analysis of the system’s performance will be provided, concluding that while agents learn to navigate the
+        environment well, reinforcement learning exhibits several key weaknesses that make it suboptimal for urban
+        traffic simulation: long training times, high computational intensity and poor control over specific agent
+        behaviour.
       </p>
     </div>
   </div>
