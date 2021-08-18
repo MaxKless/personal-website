@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ci": "ng build --configuration=production --base-href /personal-website/",
-    "deploy:ci": "ng deploy --no-build --no-silent --base-href=/personal-website/ --repo=https://github.com/<maxkless>/<personal-website>.git --name='Max Kless' --email=maxkless.dev@gmail.com",
+    "deploy:ci": "ng deploy --no-build --no-silent --base-href=/personal-website/ --repo=https://github.com/maxkless/personal-website.git --name='Max Kless' --email=maxkless.dev@gmail.com",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
