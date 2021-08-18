@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:ci": "ng build --configuration=production --base-href /personal-website/",
-    "deploy:ci": "ng deploy --no-build --base-href=/personal-website/",
+    "deploy:ci": "ng deploy --no-build --no-silent --base-href=/personal-website/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
