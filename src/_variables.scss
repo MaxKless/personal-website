@@ -2,13 +2,13 @@
 
 @import '~@angular/material/theming';
 
-$custom-primary: mat.define-palette(mat.$cyan-palette, 800, 600, 900);
-$custom-accent: mat.define-palette(mat.$orange-palette, A400, A200, A700);
+$custom-primary-palette: mat.define-palette(mat.$cyan-palette, 800, 600, 900);
+$custom-accent-palette: mat.define-palette(mat.$orange-palette, A400, A200, A700);
 
-$custom-warn: mat.define-palette(mat.$red-palette);
+$custom-warn-palette: mat.define-palette(mat.$red-palette);
 
+$primary: mat-color($custom-primary-palette);
+$accent: mat-color($custom-accent-palette);
 
-$primary: mat-color($custom-primary);
-$accent: mat-color($custom-accent);
-
-$background: #FAFAFA
+$light-background: #fafafa;
+$dark-background: #212529;

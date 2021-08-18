@@ -2,15 +2,21 @@
 
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
 
-@import "~@angular/material/theming";
-@import "./variables";
+@import '~@angular/material/theming';
+@import './_variables';
 
-html, body { height: 100%; background-color: $background; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
 .section-heading {
   font-size: 36px !important;
@@ -24,9 +30,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 $custom-theme: mat.define-light-theme(
   (
     color: (
-      primary: $custom-primary,
-      accent: $custom-accent,
-      warn: $custom-warn,
+      primary: $custom-primary-palette,
+      accent: $custom-accent-palette,
+      warn: $custom-warn-palette,
     ),
   )
 );
@@ -36,9 +42,9 @@ $custom-theme: mat.define-light-theme(
 $custom-dark-theme: mat.define-dark-theme(
   (
     color: (
-      primary: $custom-primary,
-      accent: $custom-accent,
-      warn: $custom-warn,
+      primary: $custom-primary-palette,
+      accent: $custom-accent-palette,
+      warn: $custom-warn-palette,
     ),
   )
 );
@@ -46,6 +52,3 @@ $custom-dark-theme: mat.define-dark-theme(
 .darkMode {
   @include mat.all-component-colors($custom-dark-theme);
 }
-
-
-
