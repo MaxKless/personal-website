@@ -23,4 +23,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        run: ng deploy --no-build --base-href=/personal-website/
+        run: npm run deploy:ci
