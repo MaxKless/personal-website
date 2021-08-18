@@ -1,0 +1,28 @@
+name: github pages deployment
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: use node 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: install deps
+        run: npm ci
+      - name: run build
+        run: npm run build:ci
+      - name: deploy
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          cd personal-website
+          ng deploy --no-build --base-href=/personal-website/
