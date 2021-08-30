@@ -29,6 +29,8 @@ import { SkillItemComponent } from './components/sections/skills/skill-item/skil
 import { SkillsComponent } from './components/sections/skills/skills.component';
 import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag-list.component';
 import { GithubCornerComponent } from './components/shared/github-corner/github-corner.component';
+import { ScrollFabComponent } from './components/shared/scroll-fab/scroll-fab.component';
+import { ScrollableSectionDirective } from './directives/scrollable-section/scrollable-section.directive';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { GithubCornerComponent } from './components/shared/github-corner/github-
     RecommenderSystemComponent,
     PersonalWebsiteComponent,
     GithubCornerComponent,
+    ScrollFabComponent,
+    ScrollableSectionDirective,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +68,7 @@ import { GithubCornerComponent } from './components/shared/github-corner/github-
     MatProgressBarModule,
     MatExpansionModule,
     MatSlideToggleModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

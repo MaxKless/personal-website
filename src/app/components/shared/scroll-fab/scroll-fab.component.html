@@ -1,0 +1,20 @@
+<div *ngIf="isMobile$ | async">
+  <button
+    *ngIf="(isAtPageTop$ | async) === false"
+    mat-mini-fab
+    class="mini-fab-up"
+    aria-label="Scroll Button"
+    (click)="scrollUpToNext()"
+  >
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
+  <button
+    *ngIf="(isAtPageBottom$ | async) === false"
+    mat-mini-fab
+    class="mini-fab-down"
+    aria-label="Scroll Button"
+    (click)="scrollDownToNext()"
+  >
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+</div>
