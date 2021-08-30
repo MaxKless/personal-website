@@ -1,5 +1,6 @@
 <div *ngIf="isMobile$ | async">
   <button
+    @fade
     *ngIf="(isAtPageTop$ | async) === false"
     mat-mini-fab
     class="mini-fab-up"
@@ -9,6 +10,7 @@
     <mat-icon>keyboard_arrow_up</mat-icon>
   </button>
   <button
+    @fade
     *ngIf="(isAtPageBottom$ | async) === false"
     mat-mini-fab
     class="mini-fab-down"
