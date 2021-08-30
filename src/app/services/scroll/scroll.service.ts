@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import { distinctUntilChanged, map } from 'rxjs/operators';
+import { distinctUntilChanged, map, startWith } from 'rxjs/operators';
 import { reverseFind } from 'src/app/helpers';
 
 @Injectable({
@@ -13,14 +13,20 @@ export class ScrollService {
   private sections: Record<number, Element> = {};
   private sortedPositions: number[];
 
+  // magic offsets
+  private offsetTop = 150;
+  private offsetBottom = 50;
+
   constructor() {
     const scrollObservable = fromEvent(window, 'scroll');
     this.isAtPageTop$ = scrollObservable.pipe(
-      map(() => window.scrollY === 0),
+      startWith(0),
+      map(() => window.scrollY <= this.offsetTop),
       distinctUntilChanged()
     );
     this.isAtPageBottom$ = scrollObservable.pipe(
-      map(() => Math.ceil(window.innerHeight + window.scrollY) >= document.body.scrollHeight - 50),
+      startWith(0),
+      map(() => Math.ceil(window.innerHeight + window.scrollY) >= document.body.scrollHeight - this.offsetBottom),
       distinctUntilChanged()
     );
   }
@@ -38,6 +44,9 @@ export class ScrollService {
   scrollUpToNext() {
     const currentY = Math.round(window.pageYOffset);
     const prevSectionY = reverseFind(this.sortedPositions, (n) => n < currentY);
+    console.log(currentY, prevSectionY);
+    console.log(this.sortedPositions);
+
     if (prevSectionY) {
       this.sections[prevSectionY].scrollIntoView();
       return;
