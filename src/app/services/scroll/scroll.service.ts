@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import { distinctUntilChanged, map, startWith } from 'rxjs/operators';
-import { reverseFind } from 'src/app/helpers';
+import { distinctUntilChanged, filter, map, startWith, take } from 'rxjs/operators';
+import { getTopY, pageBottomHeight, reverseFind } from 'src/app/helpers';
 
 @Injectable({
   providedIn: 'root',
@@ -12,21 +12,22 @@ export class ScrollService {
 
   private sections: Record<number, Element> = {};
   private sortedPositions: number[];
+  private scrollObservable;
 
   // magic offsets
   private offsetTop = 150;
   private offsetBottom = 50;
 
   constructor() {
-    const scrollObservable = fromEvent(window, 'scroll');
-    this.isAtPageTop$ = scrollObservable.pipe(
+    this.scrollObservable = fromEvent(window, 'scroll');
+    this.isAtPageTop$ = this.scrollObservable.pipe(
       startWith(0),
       map(() => window.scrollY <= this.offsetTop),
       distinctUntilChanged()
     );
-    this.isAtPageBottom$ = scrollObservable.pipe(
+    this.isAtPageBottom$ = this.scrollObservable.pipe(
       startWith(0),
-      map(() => Math.ceil(window.innerHeight + window.scrollY) >= document.body.scrollHeight - this.offsetBottom),
+      map(() => pageBottomHeight() >= document.body.scrollHeight - this.offsetBottom),
       distinctUntilChanged()
     );
   }
@@ -54,13 +55,22 @@ export class ScrollService {
     document.documentElement.scrollIntoView();
   }
 
-  addSection(element: Element) {
-    const topY = Math.round(
-      Math.abs(document.documentElement.getBoundingClientRect().top - element.getBoundingClientRect().top)
+  hasReachedHeight$(element: Element): Observable<boolean> {
+    const topY = getTopY(element);
+    return this.scrollObservable.pipe(
+      startWith(0),
+      filter(() => Math.ceil(window.innerHeight + window.scrollY) >= topY),
+      take(1)
     );
+  }
+
+  addSection(element: Element) {
+    const topY = getTopY(element);
     this.sections[topY] = element;
     this.sortedPositions = Object.keys(this.sections)
       .map((keyString) => parseInt(keyString))
       .sort((n1, n2) => n1 - n2);
   }
+
+  private;
 }

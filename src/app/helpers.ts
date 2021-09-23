@@ -5,3 +5,13 @@ export function reverseFind<T>(arr: T[], compare: (T) => boolean) {
     }
   }
 }
+
+export function pageBottomHeight() {
+  return Math.ceil(window.innerHeight + window.scrollY);
+}
+
+export function getTopY(element: Element): number {
+  return Math.round(
+    Math.abs(document.documentElement.getBoundingClientRect().top - element.getBoundingClientRect().top)
+  );
+}

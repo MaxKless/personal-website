@@ -3,12 +3,11 @@
     {{ label }}
   </div>
   <div class="col-9 align-self-center">
-      <mat-progress-bar mode="determinate" [value]="amount"></mat-progress-bar>
+    <mat-progress-bar mode="determinate" [value]="chargingAmount | async"></mat-progress-bar>
   </div>
 </div>
 <div class="row">
   <div class="col-9 offset-3">
     <app-chip-tag-list [tags]="tags"></app-chip-tag-list>
-
   </div>
 </div>
