@@ -1,15 +1,15 @@
-<h1 id="projects" class="pt-4 text-center section-heading" appScrollableSection>Projects</h1>
-<div class="row">
-  <div class="col-12 col-lg-6">
+<h1 id="projects" class="pt-4 text-center section-heading" appScrollableSection #sectionHeader>Projects</h1>
+<div class="row" [@appear]="(hasReached$ | async) || false">
+  <div class="project col-12 col-lg-6">
     <app-bachelor class="h-100"></app-bachelor>
   </div>
-  <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+  <div class="project col-12 col-lg-6 mt-4 mt-lg-0">
     <app-intershop-pwa class="h-100"></app-intershop-pwa>
   </div>
-  <div class="col-12 col-lg-6 mt-4">
+  <div class="project col-12 col-lg-6 mt-4">
     <app-recommender-system class="h-100"></app-recommender-system>
   </div>
-  <div class="col-12 col-lg-6 mt-4">
+  <div class="project col-12 col-lg-6 mt-4">
     <app-personal-website class="h-100"></app-personal-website>
   </div>
 </div>
