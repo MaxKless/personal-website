@@ -5,7 +5,7 @@ import { mapTo } from 'rxjs/operators';
 import { BootstrapSize, ResizeService } from 'src/app/services/resize/resize.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
-const appearAnimation = [style({ opacity: 0 }), animate('1000ms ease-in', style({ opacity: 1 }))];
+const appearAnimation = [style({ opacity: 0 }), animate('900ms 50ms ease-in', style({ opacity: 1 }))];
 
 @Component({
   selector: 'app-timeline-entry',
