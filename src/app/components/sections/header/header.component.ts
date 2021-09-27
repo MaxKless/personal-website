@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   constructor() {}
+
+  scrollToSection(name: string) {
+    document.querySelector(`#${name}`).scrollIntoView();
+  }
 }

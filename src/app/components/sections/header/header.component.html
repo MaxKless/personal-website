@@ -1,5 +1,22 @@
-<div class="big-color-bar" appScrollableSection>
-  <img src="assets/square_profile.jpeg" class="face" />
+<mat-toolbar class="toolbar" color="primary">
+  <span style="font-size: 42px"> M </span>
+  <span class="spacer"></span>
+  <button mat-stroked-button (click)="scrollToSection('overview')">About me</button>
+  <button mat-stroked-button (click)="scrollToSection('skills')">Skills</button>
+  <button mat-stroked-button (click)="scrollToSection('education')">Experience</button>
+  <button mat-stroked-button (click)="scrollToSection('projects')">Projects</button>
+  <app-github-corner style="margin-left: 60px"></app-github-corner>
+</mat-toolbar>
+<div style="padding-bottom: 50px"></div>
+<div class="container" style="padding-bottom: 50px">
+  <!-- Adjust font size based on screen size thru service -->
+  <div style="font-size: 24px; line-height: 24px; padding-bottom: 1rem">Hi, my name is</div>
+  <div style="font-size: 12vh; line-height: 12vh">Max Kless</div>
+  <div style="font-size: 10vh; line-height: 10vh; opacity: 0.4; margin-bottom: 2rem">I build things for the web.</div>
+  <p style="max-width: 540px; font-size: 20px; line-height: 20px">
+    I’m a software engineer specializing in building web applications. Currently, I’m focused on building an extensible,
+    developer-friendly web shop at Intershop.
+  </p>
+  <button mat-raised-button color="primary" class="my-3">Download my Resume</button>
 </div>
-<h1 class="title" style="font-size: 42px">Max Kless</h1>
-<h2 class="text-center">Software Engineer</h2>
+<div style="padding-bottom: 250px"></div>
