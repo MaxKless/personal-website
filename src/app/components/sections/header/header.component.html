@@ -1,13 +1,15 @@
 <mat-toolbar class="toolbar" color="primary">
   <span style="font-size: 42px"> M </span>
   <span class="spacer"></span>
-  <button mat-stroked-button (click)="scrollToSection('overview')">About me</button>
-  <button mat-stroked-button (click)="scrollToSection('skills')">Skills</button>
-  <button mat-stroked-button (click)="scrollToSection('education')">Experience</button>
-  <button mat-stroked-button (click)="scrollToSection('projects')">Projects</button>
-  <app-github-corner style="margin-left: 60px"></app-github-corner>
+  <div class="d-none d-md-block">
+    <button mat-stroked-button (click)="scrollToSection('overview')">About me</button>
+    <button mat-stroked-button (click)="scrollToSection('skills')">Skills</button>
+    <button mat-stroked-button (click)="scrollToSection('education')">Experience</button>
+    <button mat-stroked-button (click)="scrollToSection('projects')">Projects</button>
+    <app-github-corner style="margin-left: 60px"></app-github-corner>
+  </div>
 </mat-toolbar>
-<div style="padding-bottom: 50px"></div>
+<div style="padding-bottom: 100px"></div>
 <div class="container" style="padding-bottom: 50px">
   <!-- Adjust font size based on screen size thru service -->
   <div style="font-size: 24px; line-height: 24px; padding-bottom: 1rem">Hi, my name is</div>
