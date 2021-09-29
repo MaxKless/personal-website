@@ -1,5 +1,5 @@
 <mat-toolbar class="toolbar" color="primary">
-  <span style="font-size: 42px"> M </span>
+  <span style="font-size: 42px"> {{ size$ | async }} </span>
   <span class="spacer"></span>
   <div class="d-none d-md-block">
     <button mat-stroked-button (click)="scrollToSection('overview')">About me</button>
@@ -9,19 +9,17 @@
     <app-github-corner style="margin-left: 60px"></app-github-corner>
   </div>
 </mat-toolbar>
-<div style="padding-bottom: 100px"></div>
 <div class="container" style="padding-bottom: 50px">
   <!-- Adjust font size based on screen size thru service -->
-  <div style="font-size: 24px; line-height: 24px; padding-bottom: 1rem">Hi, my name is</div>
-  <div style="font-size: 12vh; line-height: 12vh">Max Kless.</div>
-  <div style="font-size: 10vh; line-height: 10vh; opacity: 0.4; margin-bottom: 2rem">I build things for the web.</div>
-  <p style="max-width: 540px; font-size: 20px; line-height: 20px">
+  <div class="my-name-is">Hi, my name is</div>
+  <div class="name">Max Kless.</div>
+  <div class="description">I build things for the web.</div>
+  <p class="intro">
     I’m a software engineer specializing in building web applications. Currently, I’m focused on building an extensible,
     developer-friendly web shop at Intershop.
   </p>
   <button mat-raised-button color="primary" class="my-3">Download my Resume</button>
   <div [@downUp]="arrowBounce$ | async" (@downUp.done)="bounce()">
-    <mat-icon class="double-arrow">keyboard_double_arrow_down</mat-icon>
+    <mat-icon (click)="scrollToSection('overview')" class="double-arrow">keyboard_double_arrow_down</mat-icon>
   </div>
 </div>
-<div style="padding-bottom: 250px"></div>
