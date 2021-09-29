@@ -9,7 +9,7 @@
     <app-github-corner style="margin-left: 60px"></app-github-corner>
   </div>
 </mat-toolbar>
-<div class="container" style="padding-bottom: 50px">
+<div class="container" @textFadeIn>
   <div class="my-name-is">Hi, my name is</div>
   <div class="name">Max Kless.</div>
   <div class="description">I build things for the web.</div>
@@ -17,7 +17,7 @@
     I’m a software engineer specializing in building web applications. Currently, I’m focused on building an extensible,
     developer-friendly web shop at Intershop.
   </p>
-  <button mat-raised-button color="primary" class="my-3">Download my Resume</button>
+  <!-- <button mat-raised-button color="primary" class="my-3">Download my Resume</button> -->
   <div [@downUp]="arrowBounce$ | async" (@downUp.done)="bounce()">
     <mat-icon (click)="scrollToSection('overview')" class="double-arrow">keyboard_double_arrow_down</mat-icon>
   </div>

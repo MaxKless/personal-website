@@ -1,4 +1,4 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -11,8 +11,16 @@ import { getTopY } from '../../../helpers';
   animations: [
     trigger('downUp', [
       transition(':increment', [
-        animate('1000ms ease-in', style({ transform: 'translateY(20px)' })),
         animate('1000ms ease-out', style({ transform: 'translateY(0)' })),
+        animate('1000ms ease-in', style({ transform: 'translateY(20px)' })),
+      ]),
+    ]),
+    trigger('textFadeIn', [
+      transition(':enter', [
+        query('*', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger('50ms', [animate('400ms ease-in-out'), style({ opacity: 1, transform: 'translateY(0)' })]),
+        ]),
       ]),
     ]),
   ],
