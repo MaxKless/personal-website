@@ -1,4 +1,47 @@
 @import '../../../../variables';
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+.my-name-is {
+  font-size: 3vh; line-height: 3vh; padding-bottom: 1rem; padding-top: 4rem;
+}
+
+.name {
+  font-size: 9vh; line-height: 12vh;
+}
+
+.description {
+  font-size: 5vh; line-height: 5vh; opacity: 0.4; margin-bottom: 2rem;
+}
+
+.intro{
+  font-size: 1rem; line-height: 1.6rem; max-width: 540px; opacity: 0.4;
+}
+
+@include media-breakpoint-up(md) {
+
+ }
+
+
+@include media-breakpoint-up(lg) {
+  .my-name-is {
+    font-size: 4vh; line-height: 4vh; padding-bottom: 1rem; opacity: 0.8;
+  }
+
+  .name {
+    font-size: 12vh; line-height: 12vh
+  }
+
+  .description {
+    font-size: 10vh; line-height: 10vh; opacity: 0.4; margin-bottom: 2rem
+  }
+  .intro {
+    max-width: 540px; font-size: 3vh; line-height: 3vh
+  }
+}
+
+
 
 .spacer {
   flex: 1 1 auto;
