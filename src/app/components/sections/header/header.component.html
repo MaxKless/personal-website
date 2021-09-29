@@ -20,5 +20,8 @@
     developer-friendly web shop at Intershop.
   </p>
   <button mat-raised-button color="primary" class="my-3">Download my Resume</button>
+  <div [@downUp]="arrowBounce$ | async" (@downUp.done)="bounce()">
+    <mat-icon class="double-arrow">keyboard_double_arrow_down</mat-icon>
+  </div>
 </div>
 <div style="padding-bottom: 250px"></div>
