@@ -19,10 +19,16 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
+
 .section-heading {
-  font-size: 36px !important;
+  font-size: 30px !important;
   margin-top: 3rem !important;
   margin-bottom: 2rem !important;
+
+  .number {
+    font-size: 24px !important;
+    color: $primary;
+  }
 }
 
 // Angular Material Theming

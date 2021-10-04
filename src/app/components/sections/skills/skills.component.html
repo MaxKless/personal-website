@@ -1,28 +1,27 @@
 <!-- Professional -->
 <div class="row" style="margin-top: 100px" appScrollableSection>
-  <div class="col-12 col-md-6" style="position: relative">
-    <mat-card class="h-100">
+  <div class="col-12 offset-md-1 col-md-11 offset-lg-1 col-lg-8" style="position: relative">
+    <h1 class="section-heading">
+      <strong class="number">02.</strong>
+      Technologies
+    </h1>
+    <mat-card>
       <button mat-fab color="primary" class="circle-icon">
         <mat-icon>settings</mat-icon>
       </button>
       <mat-card-content class="pt-3">
-        <h2 class="text-center">Technologies</h2>
         <app-skill-item
           label="Angular"
           amount="90"
           [tags]="['Typescript', 'Rxjs', 'Ngrx', 'Ngx-formly']"
         ></app-skill-item>
         <app-skill-item
-          label="Web Development"
+          label="Web Dev"
           amount="80"
           [tags]="['Javascript', 'HTML', 'CSS', 'Bootstrap', 'node.js']"
         ></app-skill-item>
         <app-skill-item label="Unity" amount="60" [tags]="['C#', 'ML-Agents', 'UniRx', 'Extenject']"></app-skill-item>
-        <app-skill-item
-          label="Development Tools"
-          amount="75"
-          [tags]="['Git', 'GitHub', 'Azure', 'VS Code']"
-        ></app-skill-item>
+        <app-skill-item label="Dev Tools" amount="75" [tags]="['Git', 'GitHub', 'Azure', 'VS Code']"></app-skill-item>
       </mat-card-content>
     </mat-card>
   </div>

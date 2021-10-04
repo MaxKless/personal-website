@@ -1,8 +1,11 @@
 <div class="row mb-3 pt-3">
-  <div class="col-3 align-top">
+  <div class="d-none d-md-block col-md-1">
+    <mat-icon color="primary">arrow_right</mat-icon>
+  </div>
+  <div class="col-2 align-top">
     {{ label }}
   </div>
-  <div class="col-9 align-self-center">
+  <div class="col-9 col-md-10 align-self-center">
     <mat-progress-bar mode="determinate" [value]="chargingAmount | async"></mat-progress-bar>
   </div>
 </div>

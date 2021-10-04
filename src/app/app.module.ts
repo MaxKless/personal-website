@@ -30,7 +30,6 @@ import { RecommenderSystemComponent } from './components/sections/projects/recom
 import { SkillItemComponent } from './components/sections/skills/skill-item/skill-item.component';
 import { SkillsComponent } from './components/sections/skills/skills.component';
 import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag-list.component';
-import { ScrollFabComponent } from './components/shared/scroll-fab/scroll-fab.component';
 import { ScrollableSectionDirective } from './directives/scrollable-section/scrollable-section.directive';
 
 @NgModule({
@@ -51,7 +50,6 @@ import { ScrollableSectionDirective } from './directives/scrollable-section/scro
     RecommenderSystemComponent,
     PersonalWebsiteComponent,
     GithubCornerComponent,
-    ScrollFabComponent,
     ScrollableSectionDirective,
   ],
   imports: [
