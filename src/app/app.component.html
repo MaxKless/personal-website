@@ -1,14 +1,19 @@
 <div class="mat-app-background" [ngClass]="{ darkMode: (darkMode$ | async) }">
-  <div class="mat-typography">
-    <app-header> </app-header>
-    <div class="container">
-      <app-overview id="overview"> </app-overview>
-      <app-skills id="skills"></app-skills>
-      <app-education id="education"></app-education>
-      <app-projects id="projects"></app-projects>
-    </div>
-    <div id="copyright" class="m-5 pb-3">
-      <p class="text-center">&copy; Max Kless, 2021</p>
-    </div>
-  </div>
+  <mat-sidenav-container>
+    <mat-sidenav position="end" mode="over" #sidenav class="w-75"><app-sidenav-menu></app-sidenav-menu></mat-sidenav>
+    <mat-sidenav-content>
+      <div class="mat-typography">
+        <app-header (openSidenavEmitter)="openSidenav()"> </app-header>
+        <div class="container">
+          <app-overview id="overview"> </app-overview>
+          <app-skills id="skills"></app-skills>
+          <app-education id="education"></app-education>
+          <app-projects id="projects"></app-projects>
+        </div>
+        <div id="copyright" class="m-5 pb-3">
+          <p class="text-center">&copy; Max Kless, 2021</p>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

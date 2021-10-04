@@ -10,6 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -31,6 +32,7 @@ import { SkillItemComponent } from './components/sections/skills/skill-item/skil
 import { SkillsComponent } from './components/sections/skills/skills.component';
 import { ChipTagListComponent } from './components/shared/chip-tag-list/chip-tag-list.component';
 import { ScrollableSectionDirective } from './directives/scrollable-section/scrollable-section.directive';
+import { SidenavMenuComponent } from './components/sections/header/sidenav-menu/sidenav-menu.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { ScrollableSectionDirective } from './directives/scrollable-section/scro
     PersonalWebsiteComponent,
     GithubCornerComponent,
     ScrollableSectionDirective,
+    SidenavMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ import { ScrollableSectionDirective } from './directives/scrollable-section/scro
     MatExpansionModule,
     MatSlideToggleModule,
     MatButtonModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

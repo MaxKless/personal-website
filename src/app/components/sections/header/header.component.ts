@@ -1,5 +1,5 @@
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { map, pairwise, startWith } from 'rxjs/operators';
 import { getTopY } from '../../../helpers';
@@ -42,6 +42,8 @@ import { getTopY } from '../../../helpers';
   ],
 })
 export class HeaderComponent implements AfterViewInit {
+  @Output() openSidenavEmitter = new EventEmitter<boolean>();
+
   arrowBounce$: Subject<number> = new Subject();
   counter: number = 0;
   spacerHeight$: Observable<number>;
@@ -72,5 +74,9 @@ export class HeaderComponent implements AfterViewInit {
 
   bounce() {
     this.arrowBounce$.next(this.counter++);
+  }
+
+  openSidenav() {
+    this.openSidenavEmitter.emit(true);
   }
 }
