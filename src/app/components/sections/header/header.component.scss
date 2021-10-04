@@ -4,7 +4,7 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 .my-name-is {
-  font-size: 3vh; line-height: 3vh; padding-bottom: 1rem; padding-top: 4rem;
+  font-size: 3vh; line-height: 3vh; padding-bottom: 1rem; padding-top: 8rem;
 }
 
 .name {
@@ -48,6 +48,8 @@
 }
 
 .toolbar {
+  position: fixed;
+  z-index: 1000;
   button {
     margin-left: 16px;
   }

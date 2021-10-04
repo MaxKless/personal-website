@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar" color="primary">
+<mat-toolbar class="toolbar" color="primary" [@toolbarFade]="showHeader$ | async">
   <span style="font-size: 42px"> M </span>
   <span class="spacer"></span>
   <div class="d-none d-md-block">

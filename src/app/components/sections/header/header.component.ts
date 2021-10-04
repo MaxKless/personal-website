@@ -1,7 +1,7 @@
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { map, pairwise, startWith } from 'rxjs/operators';
 import { getTopY } from '../../../helpers';
 
 @Component({
@@ -23,20 +23,45 @@ import { getTopY } from '../../../helpers';
         ]),
       ]),
     ]),
+    trigger('toolbarFade', [
+      state(
+        'true',
+        style({
+          transform: 'translateY(0))',
+        })
+      ),
+      state(
+        'false',
+        style({
+          transform: 'translateY(-100px)',
+        })
+      ),
+      transition('false => true', animate('400ms ease-out')),
+      transition('true => false', animate('400ms ease-in')),
+    ]),
   ],
 })
 export class HeaderComponent implements AfterViewInit {
   arrowBounce$: Subject<number> = new Subject();
   counter: number = 0;
   spacerHeight$: Observable<number>;
+  showHeader$: Observable<boolean>;
+
+  dissapearOffset = 85;
 
   @ViewChild('spacer') spacer: ElementRef;
 
   constructor() {}
 
   ngAfterViewInit() {
+    this.showHeader$ = fromEvent(window, 'scroll').pipe(
+      map(() => window.scrollY),
+      pairwise(),
+      map(([prev, cur]) => prev >= cur || cur <= this.dissapearOffset),
+      startWith(true)
+    );
     this.spacerHeight$ = fromEvent(window, 'resize').pipe(
-      startWith(0),
+      startWith(window.scrollY < this.dissapearOffset),
       map(() => window.innerHeight - getTopY(this.spacer.nativeElement))
     );
   }
