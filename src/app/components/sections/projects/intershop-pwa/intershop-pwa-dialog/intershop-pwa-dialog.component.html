@@ -4,7 +4,7 @@
 </h2>
 <mat-dialog-content class="pb-2">
   <div class="row">
-    <div class="col-6 h-100">
+    <div class="col-12 col-md-6 h-100">
       <h4>My responsibilites while developing the Intershop PWA include:</h4>
       <ul>
         <li>Developing, maintaining and testing clean, reusable angular components.</li>
@@ -17,12 +17,13 @@
           Developing within a complex deployment setup, including SSR through Angular Universal and a NGINX reverse
           proxy
         </li>
+        <li>Enabling containerized deployments through Docker and Kubernetes</li>
       </ul>
       <div class="d-flex justify-content-center">
         <a href="https://github.com/intershop/intershop-pwa" mat-raised-button color="primary"> View on Github </a>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 col-md-6 pt-2 pt-md-0">
       <div class="d-flex flex-column">
         <!-- Formly -->
         <mat-expansion-panel>
@@ -68,15 +69,23 @@
         <!-- Ts morph, will be ts lint -->
         <mat-expansion-panel class="mt-1" style="z-index: 1000">
           <mat-expansion-panel-header>
-            <mat-panel-title> Automatic Migration with TS-Morph </mat-panel-title>
+            <mat-panel-title> TSLint to ESLint migration </mat-panel-title>
           </mat-expansion-panel-header>
           <p>
             <strong> The Problem: </strong> <br />
-            AAAAAAAAAAAAAAAAAAAAAAAAAAA Migration to action creators for us and clients
+            Angular 12 deprecated the use of TSLint as their default linting solution. To stay current, we have to
+            migrate to their new solution, general-purpose ESLint. A big project, the Intershop PWA comes with a large
+            amount of custom lint rules. The entire configuration as well as all custom rules have to be migrated or
+            rewritten and the source code adapted.
           </p>
           <p>
             <strong> The Solution:</strong> <br />
-            set of ts morph scripts that parse the AST for relevant cases and update
+            I researched migration tools to aid with an automated migration to an ESLint configuration. These did part
+            of the job but not every TSLint rule has an ESLint equivalent. In addition, I studied our configuration in
+            depth and found equivalent rules or wrote new rules where appropriate. I went through the
+            <a href="https://github.com/typescript-eslint/typescript-eslint">@typescript-eslint</a>
+            source code and am using their experimental utils library to rewrite all custom rules and fixers in an
+            organized, maintanable manner.
           </p>
         </mat-expansion-panel>
       </div>

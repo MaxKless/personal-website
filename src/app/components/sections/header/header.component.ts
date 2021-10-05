@@ -1,7 +1,7 @@
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
-import { map, pairwise, startWith } from 'rxjs/operators';
+import { distinctUntilChanged, map, pairwise, startWith } from 'rxjs/operators';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { getTopY } from '../../../helpers';
 
@@ -28,7 +28,7 @@ import { getTopY } from '../../../helpers';
       state(
         'true',
         style({
-          transform: 'translateY(0))',
+          transform: 'translateY(0)',
         })
       ),
       state(
@@ -60,8 +60,9 @@ export class HeaderComponent implements AfterViewInit {
     this.showHeader$ = fromEvent(window, 'scroll').pipe(
       map(() => window.scrollY),
       pairwise(),
-      map(([prev, cur]) => prev >= cur || cur <= this.dissapearOffset),
-      startWith(true)
+      map(([prev, cur]) => prev > cur || cur < this.dissapearOffset),
+      startWith(true),
+      distinctUntilChanged()
     );
     this.spacerHeight$ = fromEvent(window, 'resize').pipe(
       startWith(window.scrollY < this.dissapearOffset),
