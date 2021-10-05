@@ -72,5 +72,7 @@ export class ScrollService {
       .sort((n1, n2) => n1 - n2);
   }
 
-  private;
+  scrollToSection(name: string) {
+    document.querySelector(`#${name}`).scrollIntoView();
+  }
 }

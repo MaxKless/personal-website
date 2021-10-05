@@ -27,7 +27,12 @@ export class AppComponent implements OnInit {
       faviconElement.href = dm ? './assets/favicon_dark.ico' : './assets/favicon.ico';
     });
   }
+
   openSidenav() {
     this.sidenav.open();
+  }
+
+  closeSidenav() {
+    this.sidenav.close();
   }
 }

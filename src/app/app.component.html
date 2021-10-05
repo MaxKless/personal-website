@@ -1,6 +1,8 @@
 <div class="mat-app-background" [ngClass]="{ darkMode: (darkMode$ | async) }">
   <mat-sidenav-container>
-    <mat-sidenav position="end" mode="over" #sidenav class="w-75"><app-sidenav-menu></app-sidenav-menu></mat-sidenav>
+    <mat-sidenav position="end" mode="over" fixedInViewport="true" #sidenav class="w-75"
+      ><app-sidenav-menu (closeSidenavEmitter)="closeSidenav()"></app-sidenav-menu
+    ></mat-sidenav>
     <mat-sidenav-content>
       <div class="mat-typography">
         <app-header (openSidenavEmitter)="openSidenav()"> </app-header>
@@ -10,7 +12,7 @@
           <app-education id="education"></app-education>
           <app-projects id="projects"></app-projects>
         </div>
-        <div id="copyright" class="m-5 pb-3">
+        <div id="copyright" class="m-5 pb-0 pb-md-3">
           <p class="text-center">&copy; Max Kless, 2021</p>
         </div>
       </div>

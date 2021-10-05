@@ -2,6 +2,7 @@ import { animate, query, stagger, state, style, transition, trigger } from '@ang
 import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { map, pairwise, startWith } from 'rxjs/operators';
+import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { getTopY } from '../../../helpers';
 
 @Component({
@@ -53,7 +54,7 @@ export class HeaderComponent implements AfterViewInit {
 
   @ViewChild('spacer') spacer: ElementRef;
 
-  constructor() {}
+  constructor(private scrollService: ScrollService) {}
 
   ngAfterViewInit() {
     this.showHeader$ = fromEvent(window, 'scroll').pipe(
@@ -69,7 +70,7 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   scrollToSection(name: string) {
-    document.querySelector(`#${name}`).scrollIntoView();
+    this.scrollService.scrollToSection(name);
   }
 
   bounce() {
